@@ -79,6 +79,20 @@ What is the best strategy to make an optimized table in Big Query if your query 
 - Partition by lpep_pickup_datetime and Partition by PUlocationID
 - Cluster on by lpep_pickup_datetime and Cluster on PUlocationID
 
+Answer
+
+- Partition by lpep_pickup_datetime  Cluster on PUlocationID
+
+the code
+
+```CREATE OR REPLACE TABLE `test-402517.nytaxi.hw3_green_optimized_2022```
+```PARTITION BY DATE(lpep_pickup_datetime)```
+```CLUSTER BY PUlocationID```
+``AS```
+```SELECT *```
+```FROM `test-402517.nytaxi.hw3_green_BQ_2022`;```
+
+
 ## Question 5:
 Write a query to retrieve the distinct PULocationID between lpep_pickup_datetime
 06/01/2022 and 06/30/2022 (inclusive)</br>
@@ -91,6 +105,28 @@ Choose the answer which most closely matches.</br>
 - 12.82 MB for non-partitioned table and 1.12 MB for the partitioned table
 - 5.63 MB for non-partitioned table and 0 MB for the partitioned table
 - 10.31 MB for non-partitioned table and 10.31 MB for the partitioned table
+
+  from the pictures we can see the answer is
+  
+- 12.82 MB for non-partitioned table and 1.12 MB for the partitioned table
+
+  from the pictures we can see the answer is
+
+<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.4.1.jpg" alt="Answer 1" width="1000" height="250">
+<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.4.2.jpg" alt="Answer 1" width="1000" height="250">
+
+the code
+
+```SELECT DISTINCT PUlocationID```
+```FROM `test-402517.nytaxi.hw3_green_optimized_2022```
+```WHERE TIMESTAMP_MICROS(CAST(lpep_pickup_datetime / 1000 AS INT64)) BETWEEN '2022-06-01' AND '2022-06-30';```
+  
+
+```SELECT DISTINCT PULocationID```
+```FROM `test-402517.nytaxi.hw3_green_partitioned_clustered_2022```
+```WHERE lpep_pickup_date BETWEEN DATE('2022-06-01') AND DATE('2022-06-30');```
+
+
 
 
 ## Question 6: 
