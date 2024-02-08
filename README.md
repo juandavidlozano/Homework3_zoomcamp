@@ -88,7 +88,7 @@ the code
 ```CREATE OR REPLACE TABLE `test-402517.nytaxi.hw3_green_optimized_2022```
 ```PARTITION BY DATE(lpep_pickup_datetime)```
 ```CLUSTER BY PUlocationID```
-``AS```
+```AS```
 ```SELECT *```
 ```FROM `test-402517.nytaxi.hw3_green_BQ_2022`;```
 
