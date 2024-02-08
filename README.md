@@ -38,8 +38,8 @@ from the pictures we can see the answer is
 
 - 0 MB for the External Table and 6.41MB for the Materialized Table
 
-<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.2.1.jpg" alt="Answer 1" width="1000" height="500">
-<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.2.2.jpg" alt="Answer 1" width="1000" height="500">
+<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.2.1.jpg" alt="Answer 1" width="1000" height="300">
+<img src="https://github.com/juandavidlozano/Homework3_zoomcamp/blob/main/homework3.2.2.jpg" alt="Answer 1" width="1000" height="300">
 
 the code
 
