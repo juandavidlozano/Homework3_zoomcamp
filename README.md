@@ -137,11 +137,21 @@ Where is the data stored in the External Table you created?
 - Big Table
 - Container Registry
 
+the answer is 
+
+- GCP Bucket
+
 
 ## Question 7:
 It is best practice in Big Query to always cluster your data:
 - True
 - False
+
+the answer is
+
+- False
+
+
 
 
 ## (Bonus: Not worth points) Question 8:
