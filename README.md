@@ -68,7 +68,7 @@ from the pictures we can see the answer is
 the code
 
 ```SELECT COUNT(*) AS zero_fare_amount_records```
-```FROM `test-402517.nytaxi.hw3_green_external_2022````
+```FROM `test-402517.nytaxi.hw3_green_external_2022```
 ```WHERE fare_amount = 0;```
 
 
